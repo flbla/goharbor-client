@@ -4,13 +4,13 @@ package artifact
 
 import (
 	"context"
-	"github.com/mittwald/goharbor-client/v5/apiv2/pkg/util"
+	"github.com/flbla/goharbor-client/v5/apiv2/pkg/util"
 	"testing"
 
-	"github.com/mittwald/goharbor-client/v5/apiv2/internal/api/client/artifact"
-	"github.com/mittwald/goharbor-client/v5/apiv2/mocks"
-	"github.com/mittwald/goharbor-client/v5/apiv2/model"
-	clienttesting "github.com/mittwald/goharbor-client/v5/apiv2/pkg/testing"
+	"github.com/flbla/goharbor-client/v5/apiv2/internal/api/client/artifact"
+	"github.com/flbla/goharbor-client/v5/apiv2/mocks"
+	"github.com/flbla/goharbor-client/v5/apiv2/model"
+	clienttesting "github.com/flbla/goharbor-client/v5/apiv2/pkg/testing"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 )

@@ -4,11 +4,11 @@ import (
 	"context"
 	"fmt"
 	"github.com/go-openapi/runtime"
-	v2client "github.com/mittwald/goharbor-client/v5/apiv2/internal/api/client"
-	"github.com/mittwald/goharbor-client/v5/apiv2/internal/api/client/artifact"
-	"github.com/mittwald/goharbor-client/v5/apiv2/model"
-	"github.com/mittwald/goharbor-client/v5/apiv2/pkg/config"
-	"github.com/mittwald/goharbor-client/v5/apiv2/pkg/util"
+	v2client "github.com/flbla/goharbor-client/v5/apiv2/internal/api/client"
+	"github.com/flbla/goharbor-client/v5/apiv2/internal/api/client/artifact"
+	"github.com/flbla/goharbor-client/v5/apiv2/model"
+	"github.com/flbla/goharbor-client/v5/apiv2/pkg/config"
+	"github.com/flbla/goharbor-client/v5/apiv2/pkg/util"
 )
 
 // RESTClient is a subclient for handling artifact related actions.

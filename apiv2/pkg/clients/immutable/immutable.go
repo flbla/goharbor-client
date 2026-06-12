@@ -2,11 +2,11 @@ package immutable
 
 import (
 	"context"
-	immutableapi "github.com/mittwald/goharbor-client/v5/apiv2/internal/api/client/immutable"
-	"github.com/mittwald/goharbor-client/v5/apiv2/pkg/config"
+	immutableapi "github.com/flbla/goharbor-client/v5/apiv2/internal/api/client/immutable"
+	"github.com/flbla/goharbor-client/v5/apiv2/pkg/config"
 
-	v2client "github.com/mittwald/goharbor-client/v5/apiv2/internal/api/client"
-	"github.com/mittwald/goharbor-client/v5/apiv2/model"
+	v2client "github.com/flbla/goharbor-client/v5/apiv2/internal/api/client"
+	"github.com/flbla/goharbor-client/v5/apiv2/model"
 
 	"github.com/go-openapi/runtime"
 )

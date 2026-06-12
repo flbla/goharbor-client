@@ -4,17 +4,17 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	clienterrors "github.com/mittwald/goharbor-client/v5/apiv2/pkg/errors"
+	clienterrors "github.com/flbla/goharbor-client/v5/apiv2/pkg/errors"
 	"strconv"
 
 	"github.com/go-openapi/runtime"
 
-	v2client "github.com/mittwald/goharbor-client/v5/apiv2/internal/api/client"
-	"github.com/mittwald/goharbor-client/v5/apiv2/internal/api/client/retention"
-	modelv2 "github.com/mittwald/goharbor-client/v5/apiv2/model"
-	"github.com/mittwald/goharbor-client/v5/apiv2/pkg/clients/projectmeta"
-	"github.com/mittwald/goharbor-client/v5/apiv2/pkg/common"
-	"github.com/mittwald/goharbor-client/v5/apiv2/pkg/config"
+	v2client "github.com/flbla/goharbor-client/v5/apiv2/internal/api/client"
+	"github.com/flbla/goharbor-client/v5/apiv2/internal/api/client/retention"
+	modelv2 "github.com/flbla/goharbor-client/v5/apiv2/model"
+	"github.com/flbla/goharbor-client/v5/apiv2/pkg/clients/projectmeta"
+	"github.com/flbla/goharbor-client/v5/apiv2/pkg/common"
+	"github.com/flbla/goharbor-client/v5/apiv2/pkg/config"
 )
 
 const (

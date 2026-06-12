@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/go-openapi/runtime"
-	"github.com/mittwald/goharbor-client/v5/apiv2/internal/api/client/immutable"
-	"github.com/mittwald/goharbor-client/v5/apiv2/pkg/errors"
+	"github.com/flbla/goharbor-client/v5/apiv2/internal/api/client/immutable"
+	"github.com/flbla/goharbor-client/v5/apiv2/pkg/errors"
 )
 
 func handleSwaggerImmutableRuleErrors(in error) error {
