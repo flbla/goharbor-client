@@ -434,7 +434,7 @@ func TestRESTClient_UpdateProject(t *testing.T) {
 
 	require.NoError(t, err)
 
-	err = apiClient.UpdateProject(ctx, project, &exampleStorageLimitNegative)
+	err = apiClient.UpdateProject(ctx, project)
 
 	require.NoError(t, err)
 

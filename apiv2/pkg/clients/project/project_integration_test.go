@@ -68,7 +68,7 @@ func TestAPINewProxyCacheProject(t *testing.T) {
 
 	defer c.DeleteProject(ctx, "proxy-cache")
 
-	err = c.UpdateProject(ctx, p, &storageLimitPositive)
+	err = c.UpdateProject(ctx, p)
 	require.NoError(t, err)
 
 	projectAfterUpdate, err := c.GetProject(ctx, "proxy-cache")
@@ -190,7 +190,7 @@ func TestAPIProjectUpdate(t *testing.T) {
 
 	p.Togglable = true
 
-	err = c.UpdateProject(ctx, p, &storageLimitPositive)
+	err = c.UpdateProject(ctx, p)
 	require.NoError(t, err)
 	p2, err := c.GetProject(ctx, name)
 	require.NoError(t, err)

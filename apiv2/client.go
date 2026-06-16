@@ -365,8 +365,8 @@ func (c *RESTClient) ListProjects(ctx context.Context, nameFilter string) ([]*mo
 	return c.project.ListProjects(ctx, nameFilter)
 }
 
-func (c *RESTClient) UpdateProject(ctx context.Context, p *modelv2.Project, storageLimit *int64) error {
-	return c.project.UpdateProject(ctx, p, storageLimit)
+func (c *RESTClient) UpdateProject(ctx context.Context, p *modelv2.Project) error {
+	return c.project.UpdateProject(ctx, p)
 }
 
 func (c *RESTClient) ProjectExists(ctx context.Context, nameOrID string) (bool, error) {

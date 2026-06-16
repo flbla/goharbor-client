@@ -3,6 +3,7 @@ package project
 import (
 	"context"
 	goerr "errors"
+
 	projectapi "github.com/flbla/goharbor-client/v5/apiv2/internal/api/client/project"
 	"github.com/flbla/goharbor-client/v5/apiv2/pkg/config"
 	"github.com/flbla/goharbor-client/v5/apiv2/pkg/errors"
@@ -39,7 +40,7 @@ type Client interface {
 	DeleteProject(ctx context.Context, nameOrID string) error
 	GetProject(ctx context.Context, nameOrID string) (*model.Project, error)
 	ListProjects(ctx context.Context, nameFilter string) ([]*model.Project, error)
-	UpdateProject(ctx context.Context, p *model.Project, storageLimit *int64) error
+	UpdateProject(ctx context.Context, p *model.Project) error
 	ProjectExists(ctx context.Context, nameOrID string) (bool, error)
 }
 
@@ -165,7 +166,7 @@ func (c *RESTClient) ListProjects(ctx context.Context, nameFilter string) ([]*mo
 // Note: Only positive values of storageLimit are supported through this method.
 // If you want to set an infinite storageLimit (-1),
 // please refer to the quota client's 'UpdateStorageQuotaByProjectID' method.
-func (c *RESTClient) UpdateProject(ctx context.Context, p *model.Project, storageLimit *int64) error {
+func (c *RESTClient) UpdateProject(ctx context.Context, p *model.Project) error {
 	project, err := c.GetProject(ctx, p.Name)
 	if err != nil {
 		return err
@@ -179,7 +180,6 @@ func (c *RESTClient) UpdateProject(ctx context.Context, p *model.Project, storag
 		CVEAllowlist: p.CVEAllowlist,
 		Metadata:     p.Metadata,
 		ProjectName:  p.Name,
-		StorageLimit: storageLimit,
 		RegistryID:   &p.RegistryID,
 	}
 
