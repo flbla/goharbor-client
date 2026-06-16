@@ -1,38 +1,21 @@
 # Contribution guide
 
 ## Table of contents
-- [Repository structure](#repository-structure)
-- [Implementing sub-clients](#implementing-sub-clients)
-- [Testing](#testing)
-- [Code generation](#code-generation)
-    - [Client APIs](#client-apis)
-    - [API mocks](#api-mocks)
+- [Contribution guide](#contribution-guide)
+	- [Table of contents](#table-of-contents)
+	- [Repository structure](#repository-structure)
+	- [Implementing sub-clients](#implementing-sub-clients)
+	- [Testing](#testing)
+		- [Unit Tests](#unit-tests)
+		- [Integration Tests](#integration-tests)
+	- [Code generation](#code-generation)
+		- [Client APIs](#client-apis)
+		- [API mocks](#api-mocks)
 
 ## Repository structure
 
 ```shell
 .
-├── apiv1
-│  ├── client.go //  The main file of the package containing the exposed 'Client' interface
-│  ├── internal
-│  │  └── api
-│  │      └── client
-│  │          ├── harbor_client.go
-│  │          └── products // Contains the 'Products' client which wraps all v1 client functions
-│  │              └── products_client.go // contains the ClientService interface used to generate 'client_service.go'
-│  ├── mocks
-│  │  └── client_service.go
-│  ├── model // v1 API definitions
-│  ├── project // Project client (as an example)
-│  │  ├── project_errors.go
-│  │  ├── project.go
-│  │  ├── project_integration_test.go
-│  │  └── project_test.go
-│  └── [...] // Other clients
-│  ├── scripts -> ../scripts // Symbolic link to code generation scripts
-│  ├── testdata -> ../testdata // Symbolic link to integration test configuration
-│  └── testing // Testing definitions
-│
 ├── apiv2
 │  ├── client.go // The main file of the package containing the exposed 'Client' interface
 │  ├── internal
@@ -81,7 +64,7 @@
 This section helps you to get started when adding / updating a new sub-client.
 
 --- 
-A new sub-client can be added by creating the corresponding package in either the [apiv1](./apiv1) or [apiv2/pkg/clients](./apiv2/pkg/clients) directory.
+A new sub-client can be added by creating the corresponding package in [apiv2/pkg/clients](./apiv2/pkg/clients) directory.
 
 For example, let's look at the existing `user` package of the `v2` client:
 
